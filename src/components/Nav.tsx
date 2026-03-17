@@ -8,10 +8,10 @@ interface NavProps {
 
 export default function Nav({ theme, onToggleTheme }: NavProps) {
   return (
-    <nav className="sticky top-0 z-10 border-b border-border bg-background/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
+      <div className="flex items-center justify-between px-6 py-3">
         <span className="text-sm font-bold tracking-wide">AP</span>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
           <a href="#skills" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Skills
           </a>
