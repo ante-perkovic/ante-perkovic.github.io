@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Ante Perković — personal portfolio page",
   "scripts": {
-    "build": "tsc"
+    "dev": "vite",
+    "build": "tsc -p tsconfig.app.json && vite build",
+    "preview": "vite preview"
   },
   "author": "Ante Perković",
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
+    "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
