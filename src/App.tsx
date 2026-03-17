@@ -3,7 +3,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-import Education from "@/components/Education";
 import Footer from "@/components/Footer";
 
 type Theme = "dark" | "light";
@@ -19,13 +18,18 @@ export default function App() {
 
   return (
     <>
-      <Nav theme={theme} onToggleTheme={toggleTheme} />
-      <main className="mx-auto max-w-3xl px-6">
+      {/* Nav + Hero together fill exactly one viewport height */}
+      <div className="flex h-svh flex-col">
+        <Nav theme={theme} onToggleTheme={toggleTheme} />
         <Hero />
+      </div>
+
+      {/* Content below the fold */}
+      <div className="mx-auto max-w-4xl px-6">
         <Skills />
         <Experience />
-        <Education />
-      </main>
+      </div>
+
       <Footer />
     </>
   );

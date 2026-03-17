@@ -7,7 +7,7 @@ export default function Education() {
         Education
       </p>
       <Card>
-        <CardContent className="flex items-start justify-between gap-4 pt-5">
+        <CardContent className="flex items-center justify-between gap-4 p-5">
           <div>
             <p className="font-bold">Bachelor's degree, Computer Science</p>
             <p className="mt-1 text-sm text-[var(--color-teal)]">

@@ -118,9 +118,9 @@ export default function Experience() {
       <div className="flex flex-col gap-0">
         {jobs.map((job, i) => (
           <div key={i}>
-            <div className="grid grid-cols-[160px_1fr] gap-6 py-8 md:grid-cols-[180px_1fr]">
-              {/* Left: date + company */}
-              <div className="text-right">
+            <div className="py-8 md:grid md:grid-cols-[180px_1fr] md:gap-6">
+              {/* Date + company — top on mobile, left column on desktop */}
+              <div className="mb-2 md:mb-0 md:text-right">
                 <p className="text-sm font-semibold text-foreground">
                   {job.companyShort}
                 </p>
@@ -130,7 +130,7 @@ export default function Experience() {
                 <p className="text-xs text-muted-foreground">{job.location}</p>
               </div>
 
-              {/* Right: content */}
+              {/* Content */}
               <div className="relative pl-6">
                 {/* Timeline dot */}
                 <span className="absolute left-0 top-[6px] h-2.5 w-2.5 rounded-full bg-[var(--color-teal)] ring-2 ring-background ring-offset-1 ring-offset-[var(--color-teal)]" />
